@@ -38,7 +38,7 @@
   let removeFromRelatedSearchedToggle;
   let removePeopleAlsoSearchForToggle;
 
-  let removeAdsFromReccomenationsToggle;
+  let removeAdsFromRecommendationsToggle;
   let removeAdCompanionSlotsToggle;
   let removeFeaturedBannersToggle;
   let removePopupsToggle;
@@ -72,7 +72,7 @@
     removeFromRelatedSearchedToggle = settings.removeFromRelatedSearches;
     removePeopleAlsoSearchForToggle = settings.removePeopleAlsoSearchFor;
 
-    removeAdsFromReccomenationsToggle = settings.removeAdsFromReccomendations;
+    removeAdsFromRecommendationsToggle = settings.removeAdsFromRecommendations;
     removeAdCompanionSlotsToggle = settings.removeAdCompanionSlots;
     removeFeaturedBannersToggle = settings.removeFeaturedBanners;
     removePopupsToggle = settings.removePopups;
@@ -159,9 +159,9 @@
         removeShortsFromSearchToggle = !removeShortsFromSearchToggle;
         setSettings({"removeShortsFromSearch": removeShortsFromSearchToggle});
         break;
-      case "removeAdsFromReccomendations":
-        removeAdsFromReccomenationsToggle = !removeAdsFromReccomenationsToggle;
-        setSettings({"removeAdsFromReccomendations": removeAdsFromReccomenationsToggle});
+      case "removeAdsFromRecommendations":
+        removeAdsFromRecommendationsToggle = !removeAdsFromRecommendationsToggle;
+        setSettings({"removeAdsFromRecommendations": removeAdsFromRecommendationsToggle});
         break;
       case "removeNewChannelsFromSearch":
         removeNewChannelsFromSearchToggle = !removeNewChannelsFromSearchToggle;
@@ -268,9 +268,9 @@
   <div class="grid gap-x-1 gap-y-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
     <OptionsCard 
       {darkMode} 
-      toggle={removeAdsFromReccomenationsToggle} 
-      handleChange={() => handleSettingsChanged("removeAdsFromReccomendations")}
-      optionName="Remove ads from reccomendations"
+      toggle={removeAdsFromRecommendationsToggle} 
+      handleChange={() => handleSettingsChanged("removeAdsFromRecommendations")}
+      optionName="Remove ads from recommendations"
       optionsDesc="Stops ads from appearing in the search page and homepage (does not block ads during video playback)"
     />
     <OptionsCard 
